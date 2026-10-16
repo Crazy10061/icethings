@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "icethings",
+  "version": "${version}",
+  "name": "icethings",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/icethings/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.code.crazy.client.IcethingsDataGenerator"
+    ],
+    "client": [
+      "org.code.crazy.client.IcethingsClient"
+    ],
+    "main": [
+      "org.code.crazy.Icethings"
+    ]
+  },
+  "mixins": [
+    "icethings.mixins.json",
+    {
+      "config": "icethings.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
