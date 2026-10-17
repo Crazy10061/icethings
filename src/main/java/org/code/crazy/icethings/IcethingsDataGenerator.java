@@ -1,4 +1,4 @@
-package org.code.crazy.client;
+package org.code.crazy.icethings;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

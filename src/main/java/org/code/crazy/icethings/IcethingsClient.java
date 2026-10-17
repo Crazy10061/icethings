@@ -1,4 +1,4 @@
-package org.code.crazy.client;
+package org.code.crazy.icethings;
 
 import net.fabricmc.api.ClientModInitializer;
 

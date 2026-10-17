@@ -11,10 +11,10 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "org.code.crazy.client.IcethingsDataGenerator"
+      "org.code.crazy.icethings.IcethingsDataGenerator"
     ],
     "client": [
-      "org.code.crazy.client.IcethingsClient"
+      "org.code.crazy.icethings.IcethingsClient"
     ],
     "main": [
       "org.code.crazy.Icethings"
