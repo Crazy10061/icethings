@@ -4,6 +4,7 @@
   "package": "org.code.crazy.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+  "Mixin"
   ],
   "injectors": {
     "defaultRequire": 1

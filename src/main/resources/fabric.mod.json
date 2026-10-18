@@ -21,11 +21,7 @@
     ]
   },
   "mixins": [
-    "icethings.mixins.json",
-    {
-      "config": "icethings.client.mixins.json",
-      "environment": "client"
-    }
+    "icethings.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
