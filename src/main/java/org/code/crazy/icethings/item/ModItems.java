@@ -9,18 +9,23 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumables;
 import org.code.crazy.Icethings;
+import org.code.crazy.icethings.food.ModFoods;
 
 import java.util.function.Function;
 
 public class ModItems {
 
+    public static final Item ICE1 = registerItem("ice1", Item::new, new Item.Properties().food(ModFoods.ICE1f).rarity(Rarity.COMMON));
+    //public static final Item ICE1 = registerItem("ice1", Item::new, new Item.Properties().food(ModFoods.ICE1f).rarity(Rarity.COMMON));
+    //public static final Item ICE1 = registerItem("ice1", properties -> new Item(properties.food(ModFoods.ICE1)), new Item(properties.rarity(Rarity.COMMON));
 
-    public static final Item ICE1 = registerItem("ice1", properties -> new Item(properties.rarity(Rarity.COMMON)));
-
-    private static Item registerItem(String name, Function<Item.Properties, Item> function) {
+    private static Item registerItem(String name, Function<Item.Properties, Item> function, Item.Properties properties) {
+        ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Icethings.MOD_ID, name));
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(Icethings.MOD_ID, name),
-                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Icethings.MOD_ID, name)))));
+                function.apply(properties.setId(key)));
     }
 
     public static void registerModItems() {
