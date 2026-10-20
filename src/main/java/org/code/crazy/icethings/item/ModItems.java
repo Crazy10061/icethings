@@ -19,8 +19,6 @@ import java.util.function.Function;
 public class ModItems {
 
     public static final Item ICE1 = registerItem("ice1", Item::new, new Item.Properties().food(ModFoods.ICE1f).rarity(Rarity.COMMON));
-    //public static final Item ICE1 = registerItem("ice1", Item::new, new Item.Properties().food(ModFoods.ICE1f).rarity(Rarity.COMMON));
-    //public static final Item ICE1 = registerItem("ice1", properties -> new Item(properties.food(ModFoods.ICE1)), new Item(properties.rarity(Rarity.COMMON));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function, Item.Properties properties) {
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Icethings.MOD_ID, name));
